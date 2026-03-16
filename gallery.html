@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BMW — Gallery</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+  
+    <link rel="stylesheet" href="css/css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.png" alt="BMW Logo" class="logo" />
+          <span>BMW</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="models.html">Models</a></li>
+          <li><a class="active" href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+          🌙
+        </button>
+        <button class="nav-toggle">☰</button>
+      </nav>
+    </header>
+
+    <main class="page container">
+
+      <h1>BMW Gallery</h1>
+
+
+      <section class="hero-m4 reveal">
+        <h2>BMW M4 Competition</h2>
+        <p>The perfect balance of design, dynamics and motorsport DNA.</p>
+
+        <img
+          src="assets/images/m4_front.jpg"
+          alt="BMW M4 Competition front"
+          class="hero-car"
+        />
+        <audio id="engine-audio"></audio>
+        <button class="btn" data-audio="assets/sounds/m4_rev.mp3">
+          Play Engine Sound
+        </button>
+      </section>
+
+
+      <section class="specs reveal">
+        <h2>Performance Highlights</h2>
+
+        <ul class="specs-list">
+          <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
+          <li><strong>Max Power:</strong> 503 hp</li>
+          <li><strong>Torque:</strong> 650 Nm</li>
+          <li><strong>0–100 km/h:</strong> 3.8 seconds</li>
+          <li><strong>Top Speed:</strong> up to 290 km/h</li>
+          <li>
+            <strong>Drive:</strong> Rear-Wheel / xDrive depending on model
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Image Gallery</h2>
+
+        <div class="gallery-grid">
+          <img
+            class="lightbox-thumb"
+            src="assets/images/m41_front.jpg"
+            alt="BMW M4 front"
+          />
+
+          <img
+            class="lightbox-thumb"
+            src="assets/images/m41_back.jpg"
+            alt="BMW M4 rear"
+          />
+
+          <img
+            class="lightbox-thumb"
+            src="assets/images/m41_side.jpg"
+            alt="BMW M4 side"
+          />
+
+          <img
+            class="lightbox-thumb"
+            src="assets/images/m4_interior.png"
+            alt="BMW M4 interior"
+          />
+
+          <img
+            class="lightbox-thumb"
+            src="assets/images/m4_track.jpg"
+            alt="BMW M4 on track"
+          />
+        </div>
+      </section>
+
+
+      <section class="video-section reveal">
+        <h2>BMW M4 Competition — Track Experience</h2>
+
+        <video controls width="100%" height="600" object-fit="cover">
+          <source src="assets/videos/m4_drive.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+
+      <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close">✕</button>
+        <img id="lightbox-image" src="" alt="expanded view" />
+      </div>
+
+      <section class="legacy-section">
+        <h2>The Legacy of BMW</h2>
+
+        <div class="legacy-slider">
+
+          <div class="legacy-card">
+            <img src="assets/images/e21.jpg" alt="BMW E21" />
+            <h4>E21 (1975–1983)</h4>
+            <h3>The One That Started It All</h3>
+            <p>
+              The very first 3 Series was born in 1975 and completely changed
+              how people looked at small luxury sedans. It proved that a car
+              could be compact, sporty, and premium at the same time. This model
+              laid the foundation for BMW’s sporty driving DNA.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img src="assets/images/e30.jpg" alt="BMW E30" />
+            <h4>E30 (1982–1994)</h4>
+            <h3>The Cult Classic</h3>
+            <p>
+              With its boxy design and strong road presence, the E30 became a
+              symbol of the 80s. It was loved both on the streets and on race
+              tracks. The legendary E30 M3 made this generation one of the most
+              respected BMWs ever built.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img src="assets/images/e36.jpg" alt="BMW E36" />
+            <h4>E36 (1990–2000)</h4>
+            <h3>90s Rebellion</h3>
+            <p>
+              The E36 introduced smoother lines and modern design language. It
+              felt more luxurious, more comfortable, and more advanced than
+              before. This generation showed how BMW could evolve without losing
+              its sporty soul.
+            </p>
+          </div>
+
+          <div class="legacy-card">
+            <img src="assets/images/e46.jpg" alt="BMW E46" />
+            <h4>E46 (1998–2006)</h4>
+            <h3>Driver’s Favorite</h3>
+            <p>
+              The E46 is often called the perfect BMW. It balanced comfort,
+              performance, and design beautifully. With smooth engines, precise
+              handling, and a premium interior, this generation became a
+              favorite among true driving lovers.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img src="assets/images/e90.jpg" alt="BMW E90" />
+            <h4>E90/E91/E92/E93 (2005–2013)</h4>
+            <h3>The Digital Upgrade</h3>
+            <p>
+              This generation brought BMW into the digital age. It introduced
+              turbo engines, modern electronics, and advanced safety systems.
+              The E90 family showed how technology and performance could work
+              perfectly together.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img src="assets/images/g20.jpg" alt="BMW G20" />
+            <h4>G20 (2018–Present)</h4>
+            <h3>The Smart Sports Sedan</h3>
+            <p>
+              The G20 is the most advanced 3 Series ever built. With sharp
+              modern styling, digital dashboards, intelligent driver-assist
+              systems and powerful turbo engines, it blends luxury with
+              performance. It represents how BMW moved into the future while
+              keeping the sporty soul of the 3 Series alive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="legacy-section">
+        <h2>BMW Concept Cars</h2>
+
+        <div class="legacy-slider">
+
+          <div class="legacy-card">
+            <img src="assets/images/vision-dee.jpg" alt="BMW i Vision Dee" />
+            <h4>BMW i Vision Dee</h4>
+            <h3>The Talking Car</h3>
+            <p>
+              The i Vision Dee is BMW’s idea of a digital companion. It can
+              talk, display emotions on the front, and even change its body
+              color using special e-ink technology. It shows how cars may become
+              more like smart devices in the future.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img
+              src="assets/images/vision-next100.jpg"
+              alt="BMW Vision Next 100"
+            />
+            <h4>BMW Vision Next 100</h4>
+            <h3>Driving in the Year 2100</h3>
+            <p>
+              This concept shows two modes: self-driving and driver-focused
+              mode. The body panels even change shape to guide air and improve
+              performance. It represents BMW’s vision of future driving
+              pleasure.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img
+              src="assets/images/vision-m-next.jpg"
+              alt="BMW Vision M Next"
+            />
+            <h4>BMW Vision M Next</h4>
+            <h3>The Hybrid Supercar</h3>
+            <p>
+              Inspired by the BMW i8, this concept mixes electric and petrol
+              power. It looks like a supercar from a sci-fi movie and shows how
+              performance cars can be fast, smart, and eco-friendly at the same
+              time.
+            </p>
+          </div>
+
+
+          <div class="legacy-card">
+            <img src="assets/images/gina.jpg" alt="BMW Gina Concept" />
+            <h4>BMW Gina Light Visionary Model</h4>
+            <h3>The Shape-Shifting Car</h3>
+            <p>
+              The BMW Gina is one of the strangest and most creative concept
+              cars ever made. Instead of metal, it uses a special fabric skin
+              stretched over a moving frame. The body can change shape to open
+              headlights, doors and even the hood, showing how design and
+              technology can merge in unbelievable ways.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" class="footer-logo" />
+            <div>
+              <h4>BMW</h4>
+              <p>Designed for Beasts By Another Beast.</p>
+            </div>
+          </div>
+
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>
+              Email:
+              <a
+                href="mailto:zeeshanshaikh.bmw@gmail.com"
+                style="color: rgb(80, 135, 253)"
+                >zeeshanshaikh.bmw@gmail.com</a
+              >
+            </p>
+            <p>Phone: 7985064792</p>
+          </div>
+
+
+          <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.bmw.com" target="_blank">🌐</a>
+              <a href="https://www.facebook.com/BMW" target="_blank">📘</a>
+              <a href="https://www.instagram.com/bmw" target="_blank">📸</a>
+              <a href="https://twitter.com/BMW" target="_blank">🐦</a>
+              <a href="https://www.youtube.com/@BMW" target="_blank">▶️</a>
+            </div>
+          </div>
+        </div>
+
+        <button
+          id="backToTop"
+          class="back-top"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        >
+          ↑ Back to Top
+        </button>
+
+        <div class="copyright">
+          © 2025 BMW Masterpiece — All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

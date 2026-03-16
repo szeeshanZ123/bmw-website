@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BMW — Invoice</title>
+    <link rel="stylesheet" href="css/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.png" class="logo" />
+          <span>BMW</span>
+        </a>
+
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <main class="page container">
+      <h1>Vehicle Invoice</h1>
+
+      <div class="invoice-box">
+
+        <div class="invoice-header">
+          <div>
+            <p><strong>Invoice No:</strong> <span id="inv-number"></span></p>
+            <p><strong>Date:</strong> <span id="inv-date"></span></p>
+          </div>
+          <div>
+            <p><strong>Dealer:</strong> BMW Authorized Dealer</p>
+            <p><strong>Location:</strong> Mumbai, India</p>
+          </div>
+        </div>
+
+        <hr />
+
+
+        <div class="invoice-customer">
+          <p><strong>Customer Name:</strong> Guest User</p>
+          <p><strong>Contact:</strong> Not Provided</p>
+          <p><strong>Payment Mode:</strong> Online Transfer</p>
+        </div>
+
+        <hr />
+
+
+        <table class="invoice-table">
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>Selected Model</td>
+            <td id="inv-car"></td>
+          </tr>
+          <tr>
+            <td>Base Price (Ex-Showroom)</td>
+            <td id="inv-price"></td>
+          </tr>
+          <tr>
+            <td>Exterior Color <span style="font-size:12px; opacity:0.7">(Selected)</span></td>
+            <td id="inv-color"></td>
+          </tr>
+          <tr>
+            <td>Wheel Configuration</td>
+            <td id="inv-rims"></td>
+          </tr>
+          <tr>
+            <td>Registration Charges (1%)</td>
+            <td id="inv-reg"></td>
+          </tr>
+          <tr>
+            <td>Comprehensive Insurance (4%)</td>
+            <td id="inv-ins"></td>
+          </tr>
+          <tr>
+            <td>Road Tax (12%)</td>
+            <td id="inv-tax"></td>
+          </tr>
+          <tr>
+            <td>Handling & Logistics</td>
+            <td id="inv-handling">₹ 50,000</td>
+          </tr>
+          <tr>
+            <td>FastTag & RTO Fees</td>
+            <td id="inv-rto">₹ 2,500</td>
+          </tr>
+        </table>
+
+        <hr />
+
+
+        <div class="invoice-footer">
+          <p><strong>Ex-Showroom Price:</strong> <span id="summ-price"></span></p>
+          <p><strong>Total Taxes & Fees:</strong> <span id="summ-tax"></span></p>
+          <p style="font-size: 22px; color: var(--blue); margin-top: 10px;">
+            <strong>On-Road Price:</strong> <span id="inv-total"></span>
+          </p>
+          <p>Status: <strong style="color: #4CAF50;">Booking Confirmed</strong></p>
+
+          <div style="margin-top: 20px">
+            <p><strong>Expected Delivery:</strong> 10–15 Working Days</p>
+            <p><strong>Booking ID:</strong> <span id="inv-booking-id">BMW-ONLINE</span></p>
+          </div>
+        </div>
+
+        <hr />
+
+
+        <p style="margin-top: 15px; font-size: 14px; opacity: 0.85">
+          Thank you for choosing BMW. This invoice is a preliminary estimate including standard taxes.
+          Final on-road price may vary slightly based on state-specific RTO norms.
+          Our financing team will contact you shortly.
+        </p>
+
+        <div style="margin-top: 25px; display: flex; gap: 10px">
+          <a href="models.html" class="btn outline">Back to Models</a>
+          <button onclick="window.print()" class="btn primary">
+            Print Invoice
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+
+      function formatMoney(amount) {
+        return "₹ " + amount.toLocaleString("en-IN");
+      }
+
+
+      const carName = localStorage.getItem("invoice_car") || "Unknown Model";
+      const carPriceRaw = parseInt(localStorage.getItem("invoice_price_raw")) || 0;
+      const carPriceStr = localStorage.getItem("invoice_price") || "—";
+
+      const carColor = localStorage.getItem("invoice_color") || "Alpine White (Standard)";
+      const carRims = localStorage.getItem("invoice_rims") || "Standard Alloys";
+
+      const invDate = localStorage.getItem("invoice_date") || new Date().toLocaleDateString();
+      const invNum = localStorage.getItem("invoice_number") || "BMW-000000";
+
+
+      document.getElementById("inv-car").textContent = carName;
+      document.getElementById("inv-price").textContent = carPriceStr;
+      
+
+      document.getElementById("inv-color").textContent = carColor;
+      document.getElementById("inv-rims").textContent = carRims;
+
+      document.getElementById("inv-number").textContent = invNum;
+      document.getElementById("inv-date").textContent = invDate;
+      document.getElementById("summ-price").textContent = carPriceStr;
+
+
+      if (carPriceRaw > 0) {
+        const regCost = carPriceRaw * 0.01;      
+        const insCost = carPriceRaw * 0.04;     
+        const taxCost = carPriceRaw * 0.12;      
+        const handlingCost = 50000;             
+        const rtoCost = 2500;                    
+
+        const totalTaxAndFees = regCost + insCost + taxCost + handlingCost + rtoCost;
+        const grandTotal = carPriceRaw + totalTaxAndFees;
+
+
+        document.getElementById("inv-reg").textContent = formatMoney(regCost);
+        document.getElementById("inv-ins").textContent = formatMoney(insCost);
+        document.getElementById("inv-tax").textContent = formatMoney(taxCost);
+        document.getElementById("summ-tax").textContent = formatMoney(totalTaxAndFees);
+        document.getElementById("inv-total").textContent = formatMoney(grandTotal);
+      } else {
+        document.getElementById("inv-total").textContent = carPriceStr;
+      }
+
+
+      const toggle = document.getElementById("themeToggle");
+      if (toggle) {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light") {
+          document.body.classList.add("light");
+          toggle.textContent = "☀️";
+        }
+
+        toggle.addEventListener("click", () => {
+          document.body.classList.toggle("light");
+          const isLight = document.body.classList.contains("light");
+          toggle.textContent = isLight ? "☀️" : "🌙";
+          localStorage.setItem("theme", isLight ? "light" : "dark");
+        });
+      }
+    </script>
+  </body>
+</html>

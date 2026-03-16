@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BMW — Contact</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.png" alt="BMW Logo" class="logo" />
+          <span>BMW</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+          🌙
+        </button>
+        <button class="nav-toggle">☰</button>
+      </nav>
+    </header>
+
+    <main class="page container">
+
+      <h1 class="reveal">Contact Us</h1>
+      <p class="reveal" style="opacity: 0.8">
+        We'd love to hear from you — whether you’re booking a test drive,
+        exploring BMW models, or need support.
+      </p>
+
+
+      <section class="contact-info">
+        <div class="contact-box reveal">
+          <h3>BMW Head Office</h3>
+          <p>Colaba, Mumbai, India</p>
+          <p><strong>Email:</strong> zeeshanshaikh.bmw@gmail.com</p>
+          <p><strong>Hours:</strong> Mon–Sat • 9am–7pm</p>
+        </div>
+
+        <div class="contact-box reveal">
+          <h3>Customer Care</h3>
+          <p><strong>Phone:</strong> +91-7985064792</p>
+          <p><strong>Toll-Free:</strong> 1800-232-1021</p>
+          <p><strong>Support:</strong> 24×7 assistance available</p>
+        </div>
+      </section>
+      <div class="contact-grid">
+
+        <div class="form-card reveal" style="padding: 40px;">
+          <h2>Send us a Message</h2>
+
+          <form id="contact-form" class="form">
+            <label
+              >Name
+              <input type="text" name="name" required />
+            </label>
+
+            <label
+              >Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label
+              >Message
+              <textarea rows="5" name="message" required></textarea>
+            </label>
+
+            <button type="submit" class="btn primary">Send Message</button>
+          </form>
+        </div>
+
+
+        <div class="map-card reveal">
+          <h2>Find Us</h2>
+
+          <iframe
+            src="https://maps.google.com/maps?q=Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="300"
+            style="border-radius: 16px; border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" class="footer-logo" />
+            <div>
+              <h4>BMW</h4>
+              <p>Designed for Beasts By Another Beast.</p>
+            </div>
+          </div>
+
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>
+              Email:
+              <a
+                href="mailto:zeeshanshaikh.bmw@gmail.com"
+                style="color: rgb(80, 135, 253)"
+                >zeeshanshaikh.bmw@gmail.com</a
+              >
+            </p>
+            <p>Phone: 7985064792</p>
+          </div>
+
+
+          <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.bmw.com" target="_blank">🌐</a>
+              <a href="https://www.facebook.com/BMW" target="_blank">📘</a>
+              <a href="https://www.instagram.com/bmw" target="_blank">📸</a>
+              <a href="https://twitter.com/BMW" target="_blank">🐦</a>
+              <a href="https://www.youtube.com/@BMW" target="_blank">▶️</a>
+            </div>
+          </div>
+        </div>
+
+        <button id="backToTop" class="back-top">↑ Back to Top</button>
+
+        <div class="copyright">
+          © 2025 BMW Masterpiece — All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
