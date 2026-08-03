@@ -1,40 +1,5 @@
-profile = {}
-goals = {}
-progress = {}
 
 
-def pause():
-    input("\nPress Enter to continue...")
-
-
-def welcome():
-    print("=" * 45)
-    print("         FITNESS GOAL TRACKER")
-    print("=" * 45)
-
-
-def menu():
-    print("\nMain Menu")
-    print("-" * 25)
-    print("1. Create User Profile")
-    print("2. View Profile")
-    print("3. Set Daily Goals")
-    print("4. Update Today's Progress")
-    print("5. View Today's Progress")
-    print("6. Exit")
-
-
-def create_profile():
-
-    print("\nCreate User Profile")
-    print("-" * 25)
-
-    profile["Name"] = input("Enter Name : ")
-
-    while True:
-        try:
-            age = int(input("Enter Age : "))
-            if age > 0:
                 profile["Age"] = age
                 break
             else:
